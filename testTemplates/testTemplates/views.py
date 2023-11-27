@@ -8,11 +8,6 @@ def main_page(request):
     data = {"menu":MENU, "title": title}
     return render(request,"./index.html", context=data)
 
-def state_page(request):
-    title = "Статья"
-    data = {"menu":MENU, "title": title}
-    return render(request,"./state.html", context=data)
-
 def about_page(request):
     title = "О нас"
     data = {"menu":MENU, "title": title}

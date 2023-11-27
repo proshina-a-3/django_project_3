@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <hr class="my-4">
 
     <div class="col-lg-12"><h3><b>Читая мы становимся умнее</b></h3>
@@ -39,4 +40,13 @@
 и дает возможность приобрести знания и умения всех предыдущих поколений живших до нас.<p3>
 	</div>
 
+{% for el in products %}
+<div class="col-lg-12">
+    <h3><b>Каталог</b></h3>
+<ul>
+	<li>Пушкин</li>
+	<li>Есенин</li>
+</ul>
+</div>
+{% endfor %}
  {% endblock %}
