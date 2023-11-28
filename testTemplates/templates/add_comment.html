@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<hr class="my-4">
+<p align="center">Привет дорогой читатель!
+  <br>
+  Сегодня хочу поделиться некоторыми мыслями о пользе чтения.
+  Причина, почему чтение книг так важно, в том, что читая, мы умнеем, растем эмоционально и психологически,
+		узнаем новое и расширяем наш кругозор.</p>
+
+	<hr class="my-4">
+
+<h1>{{title}}</h1>
+
+<form action="{% url 'thaks_page' %}" method="POST">
+    {% csrf_token %}
+    <select name="product">
+        {% for p in products %}
+        <option value="{{p.id}}">{{p.name}}</option>
+        {% endfor %}
+    </select>
+    <label for="user_name"></label>
+    <input name="user_name" id="user_name">
+    <label for="email"></label>
+    <input name="email" id="email">
+    <label for="comment"></label>
+    <input name="comment" id="comment">
+    <button type="submit">Отправить</button>
+</form>
+
+{% endblock %}
