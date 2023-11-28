@@ -21,6 +21,7 @@ def thaks_page(request):
     email = request.POST['email']
     product = Product.objects.get(pk=request.POST['product'])
     ProductComment.objects.create(user_name=user_name, comment=comment, product=product, email=email)
+    comments = ProductComment.objects.filter(checked=True)
     title = "Страница благодарности"
     data = {"menu":MENU, "title": title, "user_name":user_name}
     return render(request,"./thaks.html", context=data)
