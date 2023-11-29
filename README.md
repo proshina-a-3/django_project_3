@@ -1,5 +1,4 @@
 # Four django project
 
-## Install
-
-## Run
+## Запуск проекта из директории testTemplates
+## python manage.py runserver

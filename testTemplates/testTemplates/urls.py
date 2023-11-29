@@ -23,4 +23,4 @@ urlpatterns = [
     path('', main_page),
     path('state/', include('catalog.urls')),
     path('about/', about_page)
-]
+   ]
